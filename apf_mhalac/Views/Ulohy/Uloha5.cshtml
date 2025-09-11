@@ -1,0 +1,8 @@
+﻿@model List<UserInfo>
+
+<div class="pomoc">
+    @foreach(var user in Model)
+    {
+        <partial name="_UserCard" model="user" />
+    }
+</div>

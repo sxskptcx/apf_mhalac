@@ -40,5 +40,31 @@ namespace apf_mhalac.Controllers
         {
             return View();
         }
+
+        public IActionResult Uloha5()
+        {
+            var userList = new List<UserInfo>()
+            {
+                new UserInfo
+                {
+                    Name = "Test1",
+                    Surname = "Novotny",
+                    Email = "1@gmail.com"
+                },
+                new UserInfo
+                {
+                    Name = "Test2",
+                    Surname = "Grezdo",
+                    Email = "2@gmail.com"
+                },
+                new UserInfo
+                {
+                    Name = "Test3",
+                    Surname = "Kovacs",
+                    Email = "3@gmail.com"
+                }
+            };
+            return View();
+        }
     }
 }

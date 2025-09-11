@@ -1,0 +1,10 @@
+﻿@model List<UserInfo>
+
+<div class="text-center">
+
+    @foreach(var user in Model)
+    {
+        <h2>@user.Name</h2>
+        <p>@user.Email</p>
+    }
+</div>
