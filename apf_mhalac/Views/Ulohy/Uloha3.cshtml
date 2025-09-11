@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Uloha3";
+}
+
+<div class="text-center">
+    <div class="karty">
+        @for (var i = 1; i <= 6; i++)
+        {
+            <div class="kartica">
+                <img src="~/images/unicorn.jpg" alt="UOK" class="karta-img" />
+                <h2>Jan Novak</h2>
+                <p>Frontend Developer @i</p>
+                <a class="btn-secondary" href="/">Spat na home</a>
+            </div>
+        }
+    </div>
+</div>
