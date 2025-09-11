@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*Uloha1*/
+
+.btn-primary {
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: blue;
+}
