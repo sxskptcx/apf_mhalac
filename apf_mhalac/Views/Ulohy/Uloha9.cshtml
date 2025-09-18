@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Uloha9 JS";
+}
+
+<table id="knihyTable" border="1">
+    <tr>
+        <th>Nazov</th>
+        <th>Autor</th>
+    </tr>
+</table>
+
+<script>
+    const knihy = '[{"nazov": "Harry Potter", "autor": "J.K. Rowlingova"}, {"nazov": "Pan Prstenov", "autor": "J.R.R. Tolkien"}, {"nazov": "1984", "autor": "George Orwell"}]';
+    const knihyzoz = JSON.parse(knihy);
+    const table = document.getElementById("knihyTable");
+
+    knihy.forEach(kniha => {
+        let throw = table.insertRow();
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        cell1.this.textContent = kniha.nazov;
+        cell2.this.textContent = kniha.autor;
+    });
+</script>

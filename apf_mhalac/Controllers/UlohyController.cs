@@ -81,5 +81,15 @@ namespace apf_mhalac.Controllers
         {
             return View();
         }
+
+        public IActionResult Uloha9()
+        {
+            return View();
+        }
+
+        public IActionResult Uloha10()
+        {
+            return View();
+        }
     }
 }
