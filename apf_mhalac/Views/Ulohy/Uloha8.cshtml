@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Uloha8";
+}
+
+<div class="u8">
+    <h1>Sprava (min 20 znakov)</h1>
+    <p id="text">Pocet znakov: </p>
+    <textarea id="textareaa"></textarea>
+</div>
+
+<script>
+    const textarea = document.getElementById("textareaa");
+    const textt = document.getElementById("text");
+
+    textarea.addEventListener("input", function () {
+        const count = textarea.value.length;
+        textt.textContent = "Pocet znakov: " + count;
+        if (count >= 20) {
+            textarea.style.borderColor = "#FF0000";
+        } else {
+            textarea.style.borderColor = "#000000";
+        }
+    });
+</script>

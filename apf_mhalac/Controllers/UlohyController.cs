@@ -66,5 +66,20 @@ namespace apf_mhalac.Controllers
             };
             return View();
         }
+
+        public IActionResult Uloha6()
+        {
+            return View();
+        }
+
+        public IActionResult Uloha7()
+        {
+            return View();
+        }
+
+        public IActionResult Uloha8()
+        {
+            return View();
+        }
     }
 }
