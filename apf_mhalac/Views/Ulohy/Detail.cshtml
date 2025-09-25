@@ -1,7 +1,10 @@
-﻿@model UserModel
+﻿@model List<UserModel>
 
-<h2>Hello from server</h2>
-
-<div>
-    @Model.Name
-</div>
+@foreach (var user in Model)
+{
+    <p>Vitaj, @user.Name @user.Surname</p>
+    <p>@user.Email</p>
+    <p>@user.Age</p>
+    <p>@user.City</p>
+    <p>@user.PhoneNumber</p>
+}

@@ -6,30 +6,31 @@ namespace apf_mhalac.Controllers
     public class UlohyController : Controller
     {
 
-        public List<UserModel> userList = new List<UserModel>();
-        public IActionResult Uloha1()
-        {
-            var userList = new List<UserInfo>()
-            {
-                new UserInfo 
+        private static List<UserModel> Zoznam = new List<UserModel>() {
+                new UserModel
                 { 
                     Name = "Test1", 
                     Surname = "Novotny",
                     Email = "1@gmail.com" 
                 },
-                new UserInfo
+                new UserModel
                 {
                     Name = "Test2",
                     Surname = "Grezdo",
                     Email = "2@gmail.com"
                 },
-                new UserInfo
+                new UserModel
                 {
                     Name = "Test3",
                     Surname = "Kovacs",
                     Email = "3@gmail.com"
-                }
+                },
+
             };
+        public IActionResult Uloha1()
+        {
+            var userList = new List<UserInfo>();
+           
             return View(userList);
         }
 
@@ -107,14 +108,14 @@ namespace apf_mhalac.Controllers
         [HttpPost]
         public IActionResult Form(UserModel user)
         {
-            userList.Add(user);
-            return RedirectToAction("Detail", user);
+            Zoznam.Add(user);
+            return RedirectToAction("Detail", Zoznam);
         }
 
         [HttpGet]
         public IActionResult Detail(UserModel user)
         {
-            return View(user);
+            return View(Zoznam);
         }
     }
 }
