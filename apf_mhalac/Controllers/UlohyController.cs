@@ -5,6 +5,8 @@ namespace apf_mhalac.Controllers
 {
     public class UlohyController : Controller
     {
+
+        public List<UserModel> userList = new List<UserModel>();
         public IActionResult Uloha1()
         {
             var userList = new List<UserInfo>()
@@ -90,6 +92,29 @@ namespace apf_mhalac.Controllers
         public IActionResult Uloha10()
         {
             return View();
+        }
+        public IActionResult Uloha11()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Form()
+        {
+            return View(new UserModel());
+        }
+
+        [HttpPost]
+        public IActionResult Form(UserModel user)
+        {
+            userList.Add(user);
+            return RedirectToAction("Detail", user);
+        }
+
+        [HttpGet]
+        public IActionResult Detail(UserModel user)
+        {
+            return View(user);
         }
     }
 }
